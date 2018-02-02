@@ -58,31 +58,34 @@ public class Main {
             String hex1 = str.substring(0,2);
             String hex2 = str.substring(2,4);
             String hex3 = str.substring(4,6);
-            int intHex1 = Integer.parseInt(hex1);
-            int intHex2 = Integer.parseInt(hex2);
-            int intHex3 = Integer.parseInt(hex3);
-            int HexArray[] = new int[3];
-            HexArray[1] = intHex1;
-            HexArray[2]= intHex2;
-            HexArray[3]= intHex3
-            for (int i = 0; i <= HexArray.length; i++) {
-                if (HexArray.length == 3) {
-                } else { //if the name is given
-                    //i honestly dunno how im going to do this mathematically so im just gonna sop this
-                    String Hex = "";
-                    String RGB = "";
-                    if (str == "aliceblue"){
-                        Hex = "#F0F8FF";
-                        RGB = "240, 248, 255";
-                        System.out.println(str + "'s Hex code: " + Hex + "\n"+ str + "'s RGB code: " + RGB);
-                    }else if (str=="antiquewhite"){
-                        Hex = "#FAEBD7";
-                        RGB = "250, 235, 215";
-                        System.out.println(str + "'s Hex code: " + Hex + "\n"+ str + "'s RGB code: " + RGB);
-                    } //etc
+            String HexArray[] = new String[3];
+            HexArray[1] = hex1;
+            HexArray[2]= hex2;
+            HexArray[3]= hex3;
 
+            for (int i = 0; i <= HexArray.length; i++) {
+                //HexArray[i];  multiply valies by 16^x, x depends on which place (0 is for the ones place)
+                //then add to get the decimal equivalent
+                //oh well poop that means i needed an actual normal character array aghh well just arrays of
+                //2 for each lil substring ones
+
+                    System.out.println(255); //convert to decimal value
                 }
-            }
+
+        } else { //if the name is given
+            //i honestly dunno how im going to do this mathematically so im just gonna sop this
+            String Hex = "";
+            String RGB = "";
+            if (str == "aliceblue"){
+                Hex = "#F0F8FF";
+                RGB = "240, 248, 255";
+                System.out.println(str + "'s Hex code: " + Hex + "\n"+ str + "'s RGB code: " + RGB);
+            }else if (str=="antiquewhite"){
+                Hex = "#FAEBD7";
+                RGB = "250, 235, 215";
+                System.out.println(str + "'s Hex code: " + Hex + "\n"+ str + "'s RGB code: " + RGB);
+            } //etc
+
         }
     }
 }
