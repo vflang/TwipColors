@@ -27,13 +27,35 @@ hex F = 255 in RGB
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Color name list: AliceBlue, AntiqueWhite, Aqua Aquamarine, Azure, " +
+                "Beige, Bisque, Black, BlanchedAlmond, Blue, BlueViolet, Brown, BurlyWood, " +
+                "CadetBlue, Chartreuse, Chocolate, Coral, CornflowerBlue, Cornsilk, Crimson, " +
+                "Cyan, DarkBlue, DarkCyan, DarkGoldenRod, DarkGray, DarkGrey, DarkGreen, DarkMagenta, " +
+                "DarkOliveGreen, DarkOrange, DarkOrchid, DarkRed, DarkSalmon, DarkSeaGreen, DarkSlateBlue, " +
+                "DarkSlateGray, DarkSlateGrey, DarkTurquoise, DarkViolet, DeepPink, DeepSkyBlue, DimGray" +
+                ", DimGrey, DodgerBlue, FireBrick, FloralWhite, ForestGreen, Fuchsia, Gainsboro, GhostWhite" +
+                ", Gold, GoldenRod, Gray, Grey, Green, GreenYellow, HoneyDew, HotPink, IndianRed, Indigo " +
+                ", Ivory, Khaki, Lavender, LavenderBlush, LawnGreen, LemonChiffon, LightBlue, LightCoral, LightCyan" +
+                ", LightGoldenRodYellow, LightGray, LightGrey, LightGreen, LightPink, LightSalmon, LightSeaGreen" +
+                ", LightSkyBlue, LightSlateGray, LightSlateGrey, LightSteelBlue, LightYellow, Lime, LimeGreen" +
+                ", Linen, Magenta, Maroon, MediumAquaMarine, MediumBlue, MediumOrchid, MediumPurple, MediumSeaGreen" +
+                ", MediumSlateBlue, MediumSpringGreen, MediumTurquoise, MediumVioletRed, MidnightBlue, MintCream" +
+                ", MistyRose, Moccasin, NavajoWhite, Navy, OldLace, Olive, OliveDrab, Orange, OrangeRed, Orchid" +
+                ", PaleGoldenRod, PaleGreen, PaleTurquoise, PaleVioletRed, PapayaWhip, PeachPuff, Peru, Pink" +
+                ", Plum, PowderBlue, Purple, RebeccaPurple, Red, RosyBrown, RoyalBlue, SaddleBrown, Salmon, SandyBrown" +
+                ", SeaGreen, SeaShell, Sienna, Silver, SkyBlue, SlateBlue, SlateGray, SlateGrey, Snow, SpringGreen" +
+                ", SteelBlue, Tan, Teal, Thistle, Tomato, Turquoise, Violet, Wheat, White, WhiteSmoke, Yellow" +
+                ", YellowGreen"); //i commit seppuku
+        System.out.println("Please input a color name (from the list printed above), Hex code, or RGB triplet. " +
+                "\n *also, please leave off the # on the Hex code--this won't work if you don't.");
         Scanner userInput = new Scanner(System.in);
         String str = userInput.toString().toLowerCase();
         if (str.contains(",")) { //RGB triplet
             String[] RGBarray = str.split(",");
 
-        } else if (str.contains("#")) { //Hexadecimal
-            char[] HexArray = str.toCharArray();
+
+        } else if (str.length() == 6) { //Hexadecimal
+            char[] HexArray = str.toCharArray(); //or use substring to get them into sets of two
             for (int i = 0; i <= HexArray.length; i++) {
                 if (HexArray.length == 3) {
                 } else { //if the name is given
@@ -48,7 +70,7 @@ public class Main {
                         Hex = "#FAEBD7";
                         RGB = "250, 235, 215";
                         System.out.println(str + "'s Hex code: " + Hex + "\n"+ str + "'s RGB code: " + RGB);
-                    }
+                    } //etc
 
                 }
             }
