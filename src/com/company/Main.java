@@ -52,6 +52,8 @@ public class Main {
         String str = userInput.toString().toLowerCase();
         if (str.contains(",")) { //RGB triplet
             String[] RGBarray = str.split(",");
+            //okay i dunno i mean like both values that make up the value for R, G, or B can be vastly different
+            //also am tired heck my pea brain
 
 
         } else if (str.length() == 6) { //Hexadecimal
