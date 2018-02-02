@@ -79,28 +79,40 @@ public class Main {
             int num1;
             int num2;
             int sum;
-            for (int i = 0; i <= HexArray1.length; i++) {
-                    num2 = HexArray1[i] * (int) Math.pow(16, x);
-                    num1 = num2;
-                    //int intResult = (int) Math.pow(2, 3);
-                    sum = num1 + num2;
-                    System.out.println(sum);
+            for (int i = 0; i <= HexArray1.length + 1; i++) {
+                num2 = HexArray1[i] * (int) Math.pow(16, x);
+                num1 = num2;
+                //int intResult = (int) Math.pow(2, 3);
+                sum = num1 + num2;
+                x++;
+
+                if (i == 3) {
+                    System.out.println(sum); //to prevent this from printing the first time
                 }
+            }
             System.out.print(",");
-            for (int i = 0; i <= HexArray2.length; i++) {
+            for (int i = 0; i <= HexArray2.length + 1; i++) {
                 num2 = HexArray2[i] * (int) Math.pow(16, x);
                 num1 = num2;
                 //int intResult = (int) Math.pow(2, 3);
                 sum = num1 + num2;
-                System.out.print(sum);
+                x++;
+
+                if (i == 3) {
+                    System.out.println(sum);
+                }
             }
             System.out.print(",");
-            for (int i = 0; i <= HexArray3.length; i++) {
+            for (int i = 0; i <= HexArray3.length + 1; i++) {
                 num2 = HexArray3[i] * (int) Math.pow(16, x);
                 num1 = num2;
                 //int intResult = (int) Math.pow(2, 3);
                 sum = num1 + num2;
-                System.out.print(sum);
+                x++;
+
+                if (i == 3) {
+                    System.out.println(sum);
+                }
             }
             //put the sums into another array which is the rgb?? i mean i dunno not really necessary i guess i dont know
 
