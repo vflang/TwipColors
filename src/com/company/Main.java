@@ -55,22 +55,52 @@ public class Main {
 
 
         } else if (str.length() == 6) { //Hexadecimal
+            System.out.println("Your RGB triplet code is: ");
             String hex1 = str.substring(0,2);
             String hex2 = str.substring(2,4);
             String hex3 = str.substring(4,6);
-            String HexArray[] = new String[3];
+            /*String HexArray[] = new String[3];
             HexArray[1] = hex1;
             HexArray[2]= hex2;
             HexArray[3]= hex3;
+            */
 
-            for (int i = 0; i <= HexArray.length; i++) {
-                //HexArray[i];  multiply valies by 16^x, x depends on which place (0 is for the ones place)
-                //then add to get the decimal equivalent
-                //oh well poop that means i needed an actual normal character array aghh well just arrays of
-                //2 for each lil substring ones
+            //HexArray[i];  multiply values by 16^x, x depends on which place (0 is for the ones place)
+            //then add to get the decimal equivalent
+            //oh well poop that means i needed an actual normal character array aghh well just arrays of
+            //2 for each lil substring ones
 
-                    System.out.println(255); //convert to decimal value
+            char[] HexArray1 = hex1.toCharArray();
+            char[] HexArray2 = hex2.toCharArray();
+            char[] HexArray3 = hex3.toCharArray();
+            int x = 0;
+            int num1;
+            int num2;
+            int sum;
+            for (int i = 0; i <= HexArray1.length; i++) {
+                    num2 = HexArray1[i] * (int) Math.pow(16, x);
+                    num1 = num2;
+                    //int intResult = (int) Math.pow(2, 3);
+                    sum = num1 + num2;
+                    System.out.println(sum);
                 }
+            System.out.print(",");
+            for (int i = 0; i <= HexArray2.length; i++) {
+                num2 = HexArray2[i] * (int) Math.pow(16, x);
+                num1 = num2;
+                //int intResult = (int) Math.pow(2, 3);
+                sum = num1 + num2;
+                System.out.print(sum);
+            }
+            System.out.print(",");
+            for (int i = 0; i <= HexArray3.length; i++) {
+                num2 = HexArray3[i] * (int) Math.pow(16, x);
+                num1 = num2;
+                //int intResult = (int) Math.pow(2, 3);
+                sum = num1 + num2;
+                System.out.print(sum);
+            }
+            //put the sums into another array which is the rgb?? i mean i dunno not really necessary i guess i dont know
 
         } else { //if the name is given
             //i honestly dunno how im going to do this mathematically so im just gonna sop this
