@@ -7,6 +7,11 @@ The idea with this assignment is the user can enter either an RGB triplet (255, 
 hexadecimal (f23ab2), or named color from the common 140 HTML colors located IN THE LINK BELOW.
 Once an input is received, the other 2 colors are outputted to the user. Think of it as a color converter.
 
+Hex to RGB conversion:
+1. Get the 2 left digits of the hex color code and convert to decimal value to get the red color level.
+2. Get the 2 middle digits of the hex color code and convert to decimal value to get the green color level.
+3. Get the 2 right digits of the hex color code and convert to decimal value to get the blue color level.
+
 other 2 colors?? you mean like the other forms of it like triplet, hex, or name?
 
 i don't really know where to start with this mathematically wise.
