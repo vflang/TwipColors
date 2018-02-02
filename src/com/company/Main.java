@@ -55,7 +55,16 @@ public class Main {
 
 
         } else if (str.length() == 6) { //Hexadecimal
-            char[] HexArray = str.toCharArray(); //or use substring to get them into sets of two
+            String hex1 = str.substring(0,2);
+            String hex2 = str.substring(2,4);
+            String hex3 = str.substring(4,6);
+            int intHex1 = Integer.parseInt(hex1);
+            int intHex2 = Integer.parseInt(hex2);
+            int intHex3 = Integer.parseInt(hex3);
+            int HexArray[] = new int[3];
+            HexArray[1] = intHex1;
+            HexArray[2]= intHex2;
+            HexArray[3]= intHex3
             for (int i = 0; i <= HexArray.length; i++) {
                 if (HexArray.length == 3) {
                 } else { //if the name is given
