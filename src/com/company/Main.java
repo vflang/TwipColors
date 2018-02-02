@@ -37,7 +37,18 @@ public class Main {
             for (int i = 0; i <= HexArray.length; i++) {
                 if (HexArray.length == 3) {
                 } else { //if the name is given
-                    //i honestly dunno how im going to link w this
+                    //i honestly dunno how im going to do this mathematically so im just gonna sop this
+                    String Hex = "";
+                    String RGB = "";
+                    if (str == "aliceblue"){
+                        Hex = "#F0F8FF";
+                        RGB = "240, 248, 255";
+                        System.out.println(str + "'s Hex code: " + Hex + "\n"+ str + "'s RGB code: " + RGB);
+                    }else if (str=="antiquewhite"){
+                        Hex = "#FAEBD7";
+                        RGB = "250, 235, 215";
+                        System.out.println(str + "'s Hex code: " + Hex + "\n"+ str + "'s RGB code: " + RGB);
+                    }
 
                 }
             }
